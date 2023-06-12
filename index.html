@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Michelin Star Restaurants</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo-container">
+        <img
+          src="https://guide.michelin.com/assets/images/michelin-guide-logo-dark.svg"
+          alt="Michelin Star Restaurants"
+          class="logo"
+        />
+      </div>
+    </div>
+
+    <div id="filter-bar">
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search for Destination, restaurant..."
+        />
+        <img src="./img/search.png" alt="Search icon" class="search-icon" />
+      </div>
+      <div id="filter-container">
+        <div class="custom-select" id="distinction-select-container">
+          <select class="selected-option" id="distinction-selected">
+            <option value="">Distinction</option>
+            <option value="THREE_STARS">3 Stars</option>
+            <option value="TWO_STARS">2 Stars</option>
+            <option value="ONE_STAR">1 Star</option>
+          </select>
+        </div>
+        <div class="custom-select" id="cuisine-select-container">
+          <select class="selected-option" id="cuisine-selected">
+            <option value="">Cuisine</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Line Separator -->
+    <div class="separator"></div>
+
+    <div id="content-row">
+        <div id="restaurant-cards-container" class="clearfix"></div>
+        <div id="map" class="clearfix"></div>
+    </div>
+    <div id="pagination-container"></div>
+
+    <!-- Line Separator -->
+    <div class="separator"></div>
+
+
+    <!-- Footer -->
+    <footer>
+        <img src="img/michelin-footer.png" alt="Michelin Footer Image">
+        <p>Copyright © 2023 JLG MICHELIN Guide</p>
+        <p>by Jeremy Gonzales.</p>
+        <p>All rights reserved.</p>
+        <p><a href="#">Terms of Use</a> | <a href="#">Cookies</a> | <a href="#">Privacy Policy</a> | <a href="#">Legal Notice</a></p>
+    </footer>
+    
+
+    <!-- Papa Parse library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+  </body>
+</html>
